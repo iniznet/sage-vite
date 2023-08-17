@@ -1,5 +1,5 @@
 {
-  "name": "sage",
+  "name": "sage-vite",
   "private": true,
   "browserslist": [
     "extends @roots/browserslist-config"
@@ -9,8 +9,8 @@
   },
   "type": "module",
   "scripts": {
-    "dev": "bud dev",
-    "build": "bud build",
+    "dev": "vite",
+    "build": "vite build",
     "translate": "yarn translate:pot && yarn translate:update",
     "translate:pot": "wp i18n make-pot . ./resources/lang/sage.pot --include=\"app,resources\"",
     "translate:update": "wp i18n update-po ./resources/lang/sage.pot ./resources/lang/*.po",
@@ -19,9 +19,14 @@
     "translate:mo": "wp i18n make-mo ./resources/lang ./resources/lang"
   },
   "devDependencies": {
-    "@roots/bud": "6.12.2",
-    "@roots/bud-tailwindcss": "6.12.2",
-    "@roots/sage": "6.12.2"
+    "@roots/browserslist-config": "^6.15.1",
+    "autoprefixer": "^10.4.15",
+    "cross-env": "^7.0.3",
+    "postcss": "^8.4.28",
+    "postcss-nested": "^6.0.1",
+    "tailwindcss": "^3.3.3",
+    "vite": "^4.4.9",
+    "vite-plugin-live-reload": "^3.0.2"
   },
   "dependencies": {}
 }
