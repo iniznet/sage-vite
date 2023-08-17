@@ -6,7 +6,7 @@ Dropped support for guttenberg due to most of my work are using Classic Editor. 
 
 ## Overview
 
-Sage is a WordPress starter theme with block editor support.
+[Sage](https://github.com/roots/sage) is a WordPress starter theme ~~with block editor support~~.
 
 - Harness the power of [Laravel](https://laravel.com) and its available packages thanks to [Acorn](https://github.com/roots/acorn)
 - Clean, efficient theme templating utilizing [Laravel Blade](https://laravel.com/docs/master/blade)
