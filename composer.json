@@ -63,9 +63,11 @@
   "extra": {
     "acorn": {
       "providers": [
-        "App\\Providers\\ThemeServiceProvider",
-        "App\\Providers\\AssetsServiceProvider"
+        "App\\Providers\\ThemeServiceProvider"
       ]
     }
-  }
+  },
+  "post-autoload-dump": [
+    "Roots\\Acorn\\ComposerScripts::postAutoloadDump"
+  ]
 }

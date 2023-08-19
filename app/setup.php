@@ -14,6 +14,14 @@ use function Roots\bundle;
  * @return void
  */
 add_action('wp_enqueue_scripts', function () {
+    if (hmr_enabled()) {
+        $namespace = strtolower(wp_get_theme()->get('Name'));
+
+        wp_enqueue_script($namespace, hmr_asset('app'), [], null, true);
+
+        return;
+    }
+
     bundle('app')->enqueue();
 }, 100);
 
@@ -23,6 +31,14 @@ add_action('wp_enqueue_scripts', function () {
  * @return void
  */
 add_action('enqueue_block_editor_assets', function () {
+    if (hmr_enabled()) {
+        $namespace = strtolower(wp_get_theme()->get('Name'));
+
+        wp_enqueue_script($namespace, hmr_asset('app'), [], null, true);
+
+        return;
+    }
+
     bundle('editor')->enqueue();
 }, 100);
 
