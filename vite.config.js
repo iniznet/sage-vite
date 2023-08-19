@@ -25,6 +25,7 @@ export default defineConfig({
   },
 
   base: './',
+    publicDir: '',
 
   build: {
     manifest: true,
